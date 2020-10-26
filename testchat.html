@@ -5,7 +5,7 @@
 	
     <body>
         <div align=”center”>Hello World!</div>
-   <style type='text/css'>
+<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #005290;
 		font-family: "Arial", sans-serif;
@@ -14,18 +14,6 @@
 		outline: 1px solid #005290;
 	}
 </style>
-
-
-<a id="liveagent_button_online_5735J000000g91P" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5735J000000g91P')">
-<-- Online Chat Content -->
-</a>
-<div id="liveagent_button_offline_5735J000000g91P" style="display: none;">
-<-- Offline Chat Content -->
-</div>
-<script type="text/javascript">
-window._laq.push(function(){liveagent.showWhenOnline('5735J000000g91P', document.getElementById('liveagent_button_online_5735J000000g91P'));
-liveagent.showWhenOffline('5735J000000g91P', document.getElementById('liveagent_button_offline_5735J000000g91P'));
-});</script>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
@@ -52,25 +40,25 @@ liveagent.showWhenOffline('5735J000000g91P', document.getElementById('liveagent_
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://curious-shark-sw9xdz-dev-ed.my.salesforce.com',
-			'https://rs20092020-developer-edition.eu32.force.com/liveAgentSetupFlow',
+			'https://sace--DEVACN01.my.salesforce.com',
+			'https://devacn01-sacedevacn01.cs107.force.com/registracontatto',
 			gslbBaseURL,
-			'00D5J000000mkB9',
-			'Chat_Agents',
+			'00D1q0000008izy',
+			'CustomerCareSace',
 			{
-				baseLiveAgentContentURL: 'https://c.la2-c2-cdg.salesforceliveagent.com/content',
-				deploymentId: '5725J000000g8kN',
-				buttonId: '5735J000000g91P',
-				baseLiveAgentURL: 'https://d.la2-c2-cdg.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'Chat_Agents',
-				isOfflineSupportEnabled: true
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-fra.salesforceliveagent.com/content',
+				deploymentId: '5721q00000000cY',
+				buttonId: '5731q00000000cJ',
+				baseLiveAgentURL: 'https://d.la1-c1cs-fra.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'CustomerCareSace',
+				isOfflineSupportEnabled: false
 			}
 		);
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://curious-shark-sw9xdz-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://sace--DEVACN01.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
@@ -78,8 +66,7 @@ liveagent.showWhenOffline('5735J000000g91P', document.getElementById('liveagent_
 	} else {
 		initESW('https://service.force.com');
 	}
-</script> 
-
+</script>
 
 </body>
 </html>
