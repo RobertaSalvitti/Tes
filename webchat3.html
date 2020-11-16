@@ -1,0 +1,134 @@
+<html>
+  <meta>
+  
+ <style type='text/css'>
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        //background: url(https://sace--preprod--c.cs86.visual.force.com/resource/1604334740000/StartChat?);
+        font-family: "Arial", sans-serif;
+        background-color: #DD0031;
+        font-size: 14px;
+        box-sizing: inherit;
+        font-weight: 700;
+        max-width: 22em;
+
+    }
+    .h2{
+        color: white;
+
+
+    }
+    .embeddedServiceHelpButton .helpButton .uiButton {
+        max-width: 22em;
+
+    }
+     .embeddedServiceLiveAgentStateWaiting .waitingImage {
+    
+        padding-top: 12%;
+        padding-bottom: 12%;
+        background-size: 58%;
+    }
+    .embeddedServiceSidebarDialogState .dialogTextContainer {
+    
+        background-image: url(https://sace--preprod--c.cs86.visual.force.com/resource/1605110076000/ChatBotGray?);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-position-y: 16%;
+        background-size: 17%;
+    }
+   
+    .embeddedServiceHelpButton .helpButton .uiButton:focus {
+        font-size: 14px;
+        font-weight: 700;
+        outline: 1px solid #DD0031;
+    }
+    .embeddedServiceHelpButton .embeddedServiceIcon::before {
+        content: url(https://sace--preprod--c.cs86.visual.force.com/resource/1604334740000/StartChat?);
+    }
+    .embeddedServiceHelpButton .uiButton .helpButtonLabel .message {
+                overflow: visible;
+                font-family: "Arial", sans-serif;
+                white-space: nowrap;
+                text-transform: none;
+                background-color:transparent;
+                border-style:none;
+                border-width:none;
+                color:#FFFFFF;
+  }
+  .embeddedServiceSidebarMinimizedDefaultUI .content {
+                background-color: #E30513;
+                border-color:transparent;
+                white-space: nowrap;
+                text-transform: none;
+                border-style:none;
+                border-width:none;
+                color:#FFFFFF;
+}
+body button, body .x-btn, body .btn, body .btnDisabled, body .btnCancel, body .menuButton .menuButtonButton {
+    background: none;
+}
+.message {
+    background-color: #E30513;
+    border-style: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+  
+</style>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+    var initESW = function(gslbBaseURL) {
+        embedded_svc.settings.displayHelpButton = true; //Or false
+        embedded_svc.settings.language = 'it'; //For example, enter 'en' or 'en-US'
+        embedded_svc.settings.defaultMinimizedText = "Avvia Chat"; //(Defaults to Chat with an Expert)
+        embedded_svc.settings.disabledMinimizedText = "Nessun operatore disponibile"; //(Defaults to Agent Offline)
+        embedded_svc.settings.smallCompanyLogoImgURL = "https://sace--preprod--c.cs86.visual.force.com/resource/1604334740000/StartChat?";
+
+         embedded_svc.settings.loadingText = "Caricamento"; //(Defaults to Loading)
+        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+        // Settings for Chat
+        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+            // Returns a valid button ID.
+        //};
+        //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+
+        embedded_svc.init(
+            'https://sace--PreProd.my.salesforce.com',
+            'https://preprod-sace.cs86.force.com/registracontatto',
+            gslbBaseURL,
+            '00D7E0000008wWt',
+            'CustomerCareSace',
+            {
+                baseLiveAgentContentURL: 'https://c.la1-c1cs-lo3.salesforceliveagent.com/content',
+                deploymentId: '5727E0000004DRw',
+                buttonId: '5737E0000004DpA',
+                baseLiveAgentURL: 'https://d.la1-c1cs-lo3.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'CustomerCareSace',
+                isOfflineSupportEnabled: false
+            }
+        );
+    };
+
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://sace--PreProd.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+<!--<apex:commandButton style="background-image:url('{!$Resource.StartChat}');width:100px;height:50px"/>-->
+</meta>
+</html>
