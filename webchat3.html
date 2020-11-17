@@ -1,5 +1,7 @@
 <html>
-  <meta>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+
+
   
  <style type='text/css'>
     .embeddedServiceHelpButton .helpButton .uiButton {
@@ -10,6 +12,7 @@
         box-sizing: inherit;
         font-weight: 700;
         max-width: 22em;
+        margin:none;
 
     }
     .h2{
@@ -55,7 +58,7 @@
                 color:#FFFFFF;
   }
   .embeddedServiceSidebarMinimizedDefaultUI .content {
-                background-color: #DD0031;
+                background-color: #E30513;
                 border-color:transparent;
                 white-space: nowrap;
                 text-transform: none;
@@ -63,11 +66,14 @@
                 border-width:none;
                 color:#FFFFFF;
 }
+.embeddedServiceHelpButton .helpButtonDisabled{
+    margin-left: -99px !important;
+}
 body button, body .x-btn, body .btn, body .btnDisabled, body .btnCancel, body .menuButton .menuButtonButton {
     background: none;
 }
 .message {
-    background-color: #DD0031;
+    background-color: #E30513;
     border-style: none;
     color: white;
     padding: 0;
@@ -130,5 +136,5 @@ body button, body .x-btn, body .btn, body .btnDisabled, body .btnCancel, body .m
     }
 </script>
 <!--<apex:commandButton style="background-image:url('{!$Resource.StartChat}');width:100px;height:50px"/>-->
-  </meta>
+</meta>
 </html>
